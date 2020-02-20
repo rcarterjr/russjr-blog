@@ -1,6 +1,8 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
-## My personal blog for sharing my journey as a software developer with the world.
+# [Russjr.io](http://russjr.io)
+
+## A personal blog created to teach, learn, and connect.
 
 <p align="center">
   <a href="https://www.gatsbyjs.org">
