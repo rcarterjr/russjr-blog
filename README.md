@@ -2,7 +2,7 @@
 
 # [Russjr.io](http://russjr.io)
 
-## A personal blog created to teach, learn, and connect.
+## A personal blog created to teach, learn, and connect. 🙋‍♂️
 
 <p align="center">
   <a href="https://www.gatsbyjs.org">

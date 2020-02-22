@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import Hello from '../components/hello'
+import Socials from '../components/socials'
 
 const Container = styled.div`
     justify-content: center;
@@ -10,14 +11,6 @@ const Container = styled.div`
     align-items: center;
     flex-direction: column;
     height: 78vh;
-`
-
-const Description = styled.p`
-    padding: 0;
-    margin-bottom: 1rem;
-    font-family: MrRobot;
-    font-size: 1.4rem;
-    padding-top: 20px;
 `
 
 const NameHeader = styled.span`
@@ -45,7 +38,7 @@ const LandingBio = () => (
                 <NameHeader>
                     <Hello />
                 </NameHeader>
-                <Description>{data.site.siteMetadata.subtitle}</Description>
+                <Socials />
             </Container>
         )}
     />
