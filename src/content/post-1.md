@@ -1,9 +1,10 @@
 ---
-title: "This is such a long headline and i dont know what to write so i keep continiung"
-date: "2019-03-17"
+title: 'Get to know Russ Jr'
+date: '2019-03-17'
 draft: false
-path: "/blog/example-title"
+path: '/blog/aboutme'
 ---
+
 # H1
 
 ## H2
@@ -32,14 +33,11 @@ Paragraph
 
 ```javascript
 const foo = bar
-console.log(foo);
+console.log(foo)
 ```
 
 ---
 
-| Hello | World |
-|-------|------ |
-| Foo   | Bar   |
-
-
-
+| Hello |  World |
+| ----- | ------ |
+| Foo   | Bar    |
