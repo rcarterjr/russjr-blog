@@ -14,7 +14,7 @@ const Container = styled.div`
 `
 
 const NameHeader = styled.span`
-    margin-bottom: 0;
+    margin-bottom: 20px;
     font-family: MrRobot;
     color: red;
     font-size: calc(10px + 5vmin);
