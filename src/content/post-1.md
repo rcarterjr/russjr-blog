@@ -1,43 +1,20 @@
 ---
-title: 'Get to know Russ Jr'
+title: 'About me'
 date: '2019-03-17'
 draft: false
 path: '/blog/aboutme'
 ---
 
-# H1
+#### Hi! I'm Russell Carter Jr.
 
-## H2
+I'm a software engineer in Baltimore, MD.
 
-### H3
+I'll be using this blog to pass on what I learn as a developer and to connect with other like-minded people.
 
-#### H4
+My interests span anywhere from clever frontend tricks to fundamental algorithms in C. I love to learn and I am inspired by the amazing engineering that got us to where we are today.
 
-##### H5
+Aside from writing code, some of my hobbies include playing soccer, learning jiu-jitsu, reading, and gaming.
 
-###### H6
+If you're wondering who the heck the dude on the tab to this site is and why I'm already assuming you're my friend, allow me to introduce you to the [greatest show of all time.](https://www.usanetwork.com/mrrobot) If you already know, bonsoir 😎.
 
-Paragraph
-
----
-
-> This is a quote
-
----
-
-[Example.com](example.com)
-
----
-
-`const foo = bar`
-
-```javascript
-const foo = bar
-console.log(foo)
-```
-
----
-
-| Hello |  World |
-| ----- | ------ |
-| Foo   | Bar    |
+#### Please feel free to reach out to me on any social, or email me at <russell.c12@gmail.com>.
