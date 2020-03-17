@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import Linkedin from '../images/linkedin.png'
 import Twitter from '../images/twitter.png'
 import Github from '../images/github.png'
+// Icons designed by Alfredo Hernandez
 
 const Icon = styled.img`
     height: 52px;
