@@ -1,5 +1,5 @@
 ---
-title: 'About Russjr.io'
+title: 'About Russ Jr'
 date: '2019-03-17'
 draft: false
 path: '/blog/aboutme'
