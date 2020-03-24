@@ -27,7 +27,7 @@ With this information, we have enough to create an efficient solution to limitin
 
 This is a very basic example because it is up for you to decide what you would like to limit.
 
-This code snippet is written in Java:
+This code snippe is written in Java:
 
 ```java
 
