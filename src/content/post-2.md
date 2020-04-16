@@ -9,13 +9,13 @@ I was recently assigned an issue that required me to limit the number of write t
 
 My naive approach was to monitor Thread.activeCount() but I quickly learned that activeCount() picked up much more activity than I anticipated.
 
-The best approach involved using a data structure called Semaphores.
+My next approach involved using a data structure called Semaphores.
 
 To put it simply, a semaphore is a thread counter. When we create a semaphore, we tell it how many threads are permitted to be used at a time.
 
 Semaphores are very useful when dealing with multiple threads accessing the same resources. I remembered a lesson on semaphores in my Operating Systems class, but I never thought I would have to use them so quickly out of college.
 
-I was able to come up with a fairly intuitive solution with the help of Semaphore.tryAcquire(), Semaphore.release(), permits, and a boolean.
+All this approach required was Semaphore.tryAcquire(), Semaphore.release(), permits, and a boolean.
 
 -   Semaphore.tryAquire() returns a boolean that will let us know if a thread is available or not. If it returns true, we can do what we desire. If it returns false, we decide how to handle the failure accordingly.
 
@@ -31,7 +31,7 @@ This code snippe is written in Java:
 
 ```java
 
-static exampleFunc() throws Exception {
+static write() throws Exception {
     int permits = 10;
     Semaphore sem = new Semaphore(permits);
 
@@ -58,6 +58,72 @@ static exampleFunc() throws Exception {
 ```
 
 We use Semaphore.release() which tells the semaphore that we are done using a thread and so we can aquire another.
+
+Can you think of a reason that this approach is faulty?
+
+Every time that the function is called, a new semaphore is created. This means that every thread could have its own semaphore and there would be no consistancy in a limit.
+
+To make sure that only one semaphore is created amongst all threads, I needed to use a synchronized singleton. I learned about the singleton design pattern at the unniversity, and I was excited to use it fresh out school. Identifying what design pattern to use when is more important than remembering exactly how to code it up. I used this [Geeks for Geeks post](https://www.geeksforgeeks.org/singleton-design-pattern/) to remind myself how to implement it.
+
+```java
+
+// Semaphore sem; <--- (in the constructor)
+
+private Semaphore getSemaphore() {
+    int maxThreadPermits = setWriteThreads();
+    if (sem == null) {
+      synchronized (this) {
+        sem = new Semaphore(maxThreadPermits);
+      }
+    }
+    return sem;
+
+static write() throws Exception {
+    Semaphore sem = getSemaphore()
+
+    try {
+        Boolean threadAvailable = true;
+
+        if (sem.tryAquire()) {
+            // you were able to aquire a thread, do your thing!
+            // ...
+            threadAvailable = true;
+        } else {
+            // no threads available. throw exception or handle it how you choose
+            throw new Exception("No threads available");
+        }
+    } catch(Exception e){
+        throw e;
+    } finally {
+        if (threadAvailable) {
+            sem.release();
+        }
+    }
+}
+
+
+
+```
+
+With the combination of a synchronized getter that creates a universal semaphore and the initial implementation, we have a solution that will limit the amout of threads that will be created by our server.
+
+Our final solution:
+
+```java
+
+// Semaphore sem; <--- (in the constructor)
+
+private Semaphore getSemaphore() {
+    int maxThreadPermits = setWriteThreads();
+    if (sem == null) {
+      synchronized (this) {
+        sem = new Semaphore(maxThreadPermits);
+      }
+    }
+    return sem;
+
+
+```
 
 This is one simple usecase that doesn't use nearly as much utility as it comes with in most languages out of the box. I would suggest reading the documentation to the language you are using for more information. Here is the documentation that helped me get my head around Semaphore in [Java.](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/Semaphore.html)
 
