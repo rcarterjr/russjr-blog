@@ -63,7 +63,26 @@ Can you think of a reason that this approach is faulty?
 
 Every time that the function is called, a new semaphore is created. This means that every thread could have its own semaphore and there would be no consistancy in a limit.
 
-To make sure that only one semaphore is created amongst all threads, I needed to use a synchronized singleton. I learned about the singleton design pattern at the unniversity, and I was excited to use it fresh out school. Identifying what design pattern to use when is more important than remembering exactly how to code it up. I used this [Geeks for Geeks post](https://www.geeksforgeeks.org/singleton-design-pattern/) to remind myself how to implement it.
+To make sure that only one semaphore is created amongst all threads, we needed to use a synchronized singleton. I learned about the singleton design pattern at the university, and I was excited to use it fresh out school. Identifying what design pattern to use when is more important than remembering exactly how to code it up. I used this [Geeks for Geeks post](https://www.geeksforgeeks.org/singleton-design-pattern/) to remind myself how to implement it.
+
+```java
+
+// Semaphore sem; <--- (in the constructor)
+
+private Semaphore getSemaphore() {
+    int maxThreadPermits = setWriteThreads();
+    if (sem == null) {
+      synchronized (this) {
+        sem = new Semaphore(maxThreadPermits);
+      }
+    }
+    return sem;
+
+```
+
+With the combination of a synchronized getter that creates a universal semaphore and the initial implementation, we have a solution that will limit the amout of threads that will be created by our server.
+
+Our final solution:
 
 ```java
 
@@ -102,25 +121,6 @@ static write() throws Exception {
 }
 
 
-
-```
-
-With the combination of a synchronized getter that creates a universal semaphore and the initial implementation, we have a solution that will limit the amout of threads that will be created by our server.
-
-Our final solution:
-
-```java
-
-// Semaphore sem; <--- (in the constructor)
-
-private Semaphore getSemaphore() {
-    int maxThreadPermits = setWriteThreads();
-    if (sem == null) {
-      synchronized (this) {
-        sem = new Semaphore(maxThreadPermits);
-      }
-    }
-    return sem;
 
 
 ```
