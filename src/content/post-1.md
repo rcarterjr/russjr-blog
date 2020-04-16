@@ -5,7 +5,7 @@ draft: false
 path: '/blog/aboutme'
 ---
 
-#### Hi! I'm Russell Carter Jr.
+#### Hi! I'm Russell. You can call me Russ, or Russ Jr, or Russell. Doesn't matter.
 
 I'll be using this blog to pass on what I learn as a software developer and connect with other like-minded people.
 

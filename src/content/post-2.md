@@ -61,13 +61,13 @@ We use Semaphore.release() which tells the semaphore that we are done using a th
 
 Can you think of a reason that this approach is faulty?
 
-Every time that the function is called, a new semaphore is created. This means that every thread could have its own semaphore and there would be no consistancy in a limit.
+Every time that write() is called, a new semaphore is created. This means that every thread could have its own semaphore and there would be no consistancy in a limit.
 
 To make sure that only one semaphore is created amongst all threads, we needed to use a synchronized singleton. I learned about the singleton design pattern at the university, and I was excited to use it fresh out school. Identifying what design pattern to use when is more important than remembering exactly how to code it up. I used this [Geeks for Geeks post](https://www.geeksforgeeks.org/singleton-design-pattern/) to remind myself how to implement it.
 
 ```java
 
-// Semaphore sem; <--- (in the constructor)
+Semaphore sem;
 
 private Semaphore getSemaphore() {
     int maxThreadPermits = setWriteThreads();
@@ -86,7 +86,7 @@ Our final solution:
 
 ```java
 
-// Semaphore sem; <--- (in the constructor)
+Semaphore sem;
 
 private Semaphore getSemaphore() {
     int maxThreadPermits = setWriteThreads();
