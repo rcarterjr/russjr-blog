@@ -76,9 +76,15 @@ const Header = ({ siteTitle }) => (
     <SiteHeader>
         <Content>
             <p>
-                <HomeLink to="/">{siteTitle}</HomeLink>
-                <NavLink to="/blog">Blog</NavLink>
-                <MyLink to="/blog/aboutme">About</MyLink>
+                <HomeLink activeClassName="is-active" to="/">
+                    {siteTitle}
+                </HomeLink>
+                <NavLink activeClassName="is-active" to="/blog">
+                    Blog
+                </NavLink>
+                <MyLink activeClassName="is-active" to="/blog/aboutme">
+                    About
+                </MyLink>
             </p>
         </Content>
     </SiteHeader>
