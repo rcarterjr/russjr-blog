@@ -7,6 +7,10 @@ path: '/blog/functional-programming'
 
 ## An Introduction to Functional Programming
 
+A functional program consists of nothing but functions. That's it.
+
+give credit to : <a href="https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf" target="_blank"> https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf </a>
+
 ## An Code example with PrismJS
 
 This blog uses the Atom Editor Theme.
