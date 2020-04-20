@@ -1,9 +1,11 @@
 ---
-title: 'Code Example'
+title: 'Functional Programming'
 date: '2019-06-06'
-draft: true
-path: '/blog/code-example'
+draft: false
+path: '/blog/functional-programming'
 ---
+
+## An Introduction to Functional Programming
 
 ## An Code example with PrismJS
 
