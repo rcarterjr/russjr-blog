@@ -11,7 +11,7 @@ I'll be using this blog to pass on what I learn as a software developer and conn
 
 You can expect posts anywhere from neat frontend tricks to fundamental algorithms in software development. I love to learn and I am inspired by the amazing engineers that got us to where we are today.
 
-P.S. If you're wondering who the heck the dude on the tab to this site is and why I'm already assuming you're my friend, allow me to introduce you to the [greatest show of all time.](https://www.usanetwork.com/mrrobot) If you already know, bonsoir 😎.
+P.S. If you're wondering who the heck the dude on the tab to this site is and why I'm already assuming you're my friend, allow me to introduce you to the <a href="https://www.usanetwork.com/mrrobot" target="_blank">greatest show of all time. </a> If you already know, bonsoir 😎.
 
 #### Please feel free to reach out to me on any social, or email me at <russell.c12@gmail.com>.
 
