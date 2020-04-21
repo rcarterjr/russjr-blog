@@ -11,9 +11,15 @@ A functional program consists of nothing but functions. That's it.
 
 give credit to : <a href="https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf" target="_blank"> https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf </a>
 
-## An Code example with PrismJS
+-   Higher Order Functions
 
-This blog uses the Atom Editor Theme.
+-   Lazy evaluation
+
+-   it has no assignment, no side effects, no flow of control
+
+-   a complete functional program is just a function from its input to its output
+
+---
 
 ```js
 console.log('Hello World')
