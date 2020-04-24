@@ -7,9 +7,10 @@ path: '/blog/functional-programming'
 
 ## An Introduction to Functional Programming
 
-A functional program consists of nothing but functions. That's it.
+A functional program consists of entirely functions. That's it.
 
-give credit to : <a href="https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf" target="_blank"> https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf </a>
+At the university, one of my favorite classes was Programming Languages and Design Implementations. Functional programming was my favorite topic in that class, and my favorite read was a paper recommended by my professor <a href="https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf" target="_blank"> written by John Hughes at Chalmers University of Technology. </a>
+!!! Fact check the source, college, author, etc.
 
 -   Higher Order Functions
 
