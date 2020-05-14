@@ -3,7 +3,7 @@ module.exports = {
         title: `Russ Jr`,
         subtitle: `software developer`,
         description: `A minimal blog starter built with Gatsbyjs. The needed Gatsby files are included.`,
-        author: `@niklasmtj`,
+        author: `@rcarterjr`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
