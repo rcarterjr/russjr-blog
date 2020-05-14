@@ -1,7 +1,7 @@
 ---
 title: 'Functional Programming'
 date: '2019-06-06'
-draft: false
+draft: true
 path: '/blog/functional-programming'
 ---
 
@@ -11,6 +11,8 @@ A functional program consists of entirely functions. That's it.
 
 At the university, one of my favorite classes was Programming Languages and Design Implementations. Functional programming was my favorite topic in that class, and my favorite read was a paper recommended by my professor <a href="https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf" target="_blank"> written by John Hughes at Chalmers University of Technology. </a>
 !!! Fact check the source, college, author, etc.
+
+check out https://dev.to/navi/why-functional-programming-matters-2o95
 
 -   Higher Order Functions
 
