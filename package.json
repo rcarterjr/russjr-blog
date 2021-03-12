@@ -33,7 +33,7 @@
     },
     "devDependencies": {
         "prettier": "^1.17.1",
-        "react-dev-utils": "^10.2.1",
+        "react-dev-utils": "^11.0.4",
         "webpack": "^4.41.5",
         "webpack-cli": "^3.3.10"
     },
